@@ -91,6 +91,12 @@ section {
     transition: ease 0.3s all;
 }
 
+.activenav {
+    background: #333;
+    color:green;
+    transition: ease 0.3s all;
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -236,7 +242,4 @@ section.your-active-class .landing__container::after {
 	z-index: -1;
 }
 	
-border:red solid 1px;
-	
-background-color: lightcoral;
-}
+

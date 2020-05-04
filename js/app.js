@@ -60,10 +60,43 @@ for(let i=1;i<=numberOfTabs;i++){
 
 
 /** */
-window.addEventListener('scroll',highlightContent);
+document.addEventListener('scroll',makeActive);
 
-function highlightContent(e){
-/*  document.documentElement.scrollIntoView(false);*/
+function makeActive(e){
+  const sc = window.scrollY;
+ // console.log(sc);
+  const Allsections = document.querySelectorAll('section');
+for (const sectn of Allsections){
+  const box = sectn.getBoundingClientRect();
+  if(box.top  <=400 && box.bottom >= 660){
+   /** Removing active class from all other sections */
+    var allOtherSections = document.querySelectorAll("main > section:not(sectn)");
+    allOtherSections.forEach(a=>a.classList.remove("your-active-class")); 
+    /*Adding class to the selected class* */
+    sectn.classList.add("your-active-class");
+    const selectedSectionID = sectn.id;
+    const hrefAttribute = "#"+sectn.id;
+   /**Selecting all lis in Navigation */
+    const liArrayTags = document.getElementsByTagName('a');
+    const allLis = document.querySelectorAll('li');
+    // remove activenag class before setting a new one
+    allLis.forEach(a=>a.classList.remove("activenav"));
+    for (j=0;j<=(numberOfTabs-1);j++){
+
+    /* console.log(liArrayTags[j].hash);*/
+    if(liArrayTags[j].hash == hrefAttribute){
+      allotherLis =liArrayTags.parentElement;
+      SelectedLi = liArrayTags[j].parentElement;
+      SelectedLi.classList.add('activenav');
+   
+     }
+
+    }
+   
+    
+}
+
+}
 
 }
 
