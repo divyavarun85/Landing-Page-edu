@@ -2,18 +2,14 @@
 
 Landing page is a dynamically created page including dynamic navigation bar which directs to dynamic sections.
 
-## Table of Contents
-Landing page includes a navigation bar and sections 
 
-* [Instructions](#instructions)
+## Instructions ##
 
 click on the tabs in navigation bar and it will scroll down to corresponding sections which will be highlighted on click.
 
-## Instructions
+- Open app.js and add menubar items to the nanNames Array.This will reflect all added items in the navigation bar
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+- Adding sections in index.html with id and data-nav will reflect the added section in landing page
 
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+- Clicking menu items will scroll down to appropriate content section along with highlighting the current section 
 
